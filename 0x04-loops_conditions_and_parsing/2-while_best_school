@@ -3,7 +3,7 @@
 
 counnt = 0
 
-while [ $count -lt 10 ]
+while [ $count -1t 10 ]
 do
 	echo "Best School"
 	(( count++ ))
