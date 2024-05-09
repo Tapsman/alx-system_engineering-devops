@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A bash script tha displays listening parts
+# To only sort listening sockets, that show the PDD and the name
+# of the program to which each socket belongs to
+
+netstat -l -p
