@@ -3,4 +3,4 @@
 # To only sort listening sockets, that show the PDD and the name
 # of the program to which each socket belongs to
 
-netstat -l -p
+netstat -l --program
