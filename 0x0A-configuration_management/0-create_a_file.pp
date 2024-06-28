@@ -1,4 +1,4 @@
-# The config creates a file using puppet
+#The config creates a file using puppet
 file { '/tmp/school':
 	mode	=> '0744',
 	owner	=> 'www-data',
