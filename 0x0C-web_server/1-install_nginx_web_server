@@ -25,6 +25,6 @@ cp /var/www/html/index.nginx-debian.html /var/www/htm/index.nginx-debian.html.bc
 echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
 # Now we have to restart the nginx
-sudo service start nginx
+sudo service nginx restart
 
 echo -e "\nCompleted. \n"
