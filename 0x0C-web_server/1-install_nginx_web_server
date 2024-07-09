@@ -8,17 +8,18 @@ echo -e "Updating and installing Nginx.\n"
 sudo apt-get update -y -qq && \
 	 sudo apt-get install nginx -y
 
-echo -e "\nSetting some of minor things.\n"
+echo -e "\nSetting up some of minor stuff.\n"
 
 sudo service nginx start
 
 # This script is going to permit nginx of=n firewall
 sudo ufw allow 'Nginx HTTP'
 
+# This script will then give users ownership for easy editing
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 
-# This script will then give users ownership for easy editing
+# Back up the index
 cp /var/www/html/index.nginx-debian.html /var/www/htm/index.nginx-debian.html.bckp
 
 # This script will then create a new index
