@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is a script that is going to configure web-02 to mimic web-01.
+# This is a script that will configure web-02 to mimic web-01.
 # Where the name of the custom HTTP header is served by X-Served-By.
 # Where the value of  header is host name of server Nginx is running on.
 sudo apt-get -y update
