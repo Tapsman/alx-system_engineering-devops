@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This is a script that is going to configure web-02 to mimic web-01.
+# Where the name of the custom HTTP header is served by X-Served-By.
+# Where the value of  header is host name of server Nginx is running on.
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw llow 'Nginx HTTP'
+# Now make the directory
+sudo mkdir -p /var/www/html /var/www/error
+sudo chmod -R 755 /var/www
+echo 'Hello World!' > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
