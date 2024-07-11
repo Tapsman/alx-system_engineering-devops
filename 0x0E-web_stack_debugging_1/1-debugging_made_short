@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# From the task 0
-# Making the fix short and sweet, then configures to run on p80
+# Task 0, making the fix short and sweet, then configures to run on p80
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx restart
 echo "" > /run/nginx.pid
