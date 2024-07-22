@@ -1,0 +1,22 @@
+# Now we have to update the script
+echo -e "Updating\n"
+sudo apt-get update
+
+# Now i have to install the UFW
+echo -e "Installing UFW\n"
+sudo apt-get install -y ufw
+
+echo -e "configuring UFW...\n"
+
+# And now i am going to permit outgoing snd the also deny Incoming traffic
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# And also now the script is going to allow allow the ports
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
+
+# And lastly the script will now enable the firewall
+sudo ufw enable
+echo -e "Process Completed.\n"
