@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script will then fix the bug in the web server
+
+chmod 644 /etc/nginx/nginx/.conf
+sed -Ei 's/\s*#?\*user .*/user nginx;/' /etc/nginx/nginx/.conf
+sed -Ei 's/(listen (\[::\]:)? /\180 /' /etc/nginx/sites-enabled/default
+
+# Now have to kill the server
+pkill apache2
+
+# And lastly to restart the nginx
+su nginx -s /bin/bash -c 'service nginx restart'
