@@ -3,7 +3,7 @@
 
 chmod 644 /etc/nginx/nginx/.conf
 sed -Ei 's/\s*#?\*user .*/user nginx;/' /etc/nginx/nginx/.conf
-sed -Ei 's/(listen (\[::\]:)? /\180 /' /etc/nginx/sites-enabled/default
+sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
 
 # Now have to kill the server
 pkill apache2
