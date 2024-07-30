@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This is a function that returns an ID information for given emplyee"""
+"""This is a function that returns an ID information for given employee"""
 import requests
 import sys
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + "users/{}".format(sys.argv[1])).json()
-    todos = requests.get(url + "todos", params={"userID": sys.argv[1]}).json()
+    todos = requests.get(url + "todos", params={"user_ID": sys.argv[1]}).json()
 
     """Completion, looping in the todos"""
     completed = [t.get("title") for t in todos if t.get("completed") is True]
