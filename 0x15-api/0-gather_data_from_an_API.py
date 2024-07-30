@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This is a function that returns an ID information for given emplyee"""
-import sys
 import requests
+import sys
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
