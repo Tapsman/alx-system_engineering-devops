@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This script will querry the Reddit API, return number of subscribers
 """
