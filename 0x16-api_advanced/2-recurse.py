@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-Recursive function that queri Redddit api
+Recursive function that querri Redddit api
 """
 import requests
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):
-    """The function the returns all the list of titles per subreddit"""
+    """This is a function that returns all the list of titles per subreddit"""
+
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
         "User-Agent": "taps_man"
