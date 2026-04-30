@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function will then queurry a reddit api
+This is a function that will then queurry a reddit api
 and then posts it on the top ten
 hot posts of the subreddit
 """
@@ -55,7 +55,7 @@ def recurse(subreddit, dictionary, after=None):
 
 
 def count_words(subreddit, word_list):
-    """This function then counts the the words"""
+    """This function will then count the words"""
     dictionary = {}
 
     for word in word_list:
